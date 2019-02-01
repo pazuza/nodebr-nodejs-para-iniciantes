@@ -19,7 +19,6 @@ class Database {
 
     async obterDadosArquivo() {
         const arquivo = await readFileAsync(this.NOME_ARQUIVO, 'utf8');
-
         return JSON.parse(arquivo.toString()); //É necessário fazer o parse pq quando o arquivo vem, está um pouco diferente
     }
 
@@ -29,11 +28,8 @@ class Database {
 
     async listar(id) { //Sempre que tiver await, é necessário o async
         const dados          = await this.obterDadosArquivo();
-        const dadosFiltrados = dados.filter(function (item) {
-                id ? (item.id == id): true;  //O id foi passado e é true? Se sim usa o item.id e procura quem tem o id específico. Senão manda true, ai pega a lista completa
-            }); 
-
-            return dadosFiltrados;
+        const dadosFiltrados = dados.filter( (item) => (id ? (item.id === id): true));  //O id foi passado e é true? Se sim usa o item.id e procura quem tem o id específico. Senão manda true, ai pega a lista completa
+        return dadosFiltrados;
         }
     }
 

@@ -12,11 +12,11 @@ const DEFAULT_ITEM_CADASTRAR = {
 describe('Suite de manipulação de Heróis', () => {
 
     it('Deve pesquisar um herói, usando arquivos', async () => {
-        const expected  = DEFAULT_ITEM_CADASTRAR;
-        const resultado = await database.listar(expected.id);
+        const expected    = DEFAULT_ITEM_CADASTRAR;
+        const [resultado] = await database.listar(expected.id);
         
         //ok(resultado, expected);
-        ddepEqual(resultado, expected);
+        deepEqual(resultado, expected);
     });
 
     // it('Deve cadastrar um herói, usando arquivos', async () => {
