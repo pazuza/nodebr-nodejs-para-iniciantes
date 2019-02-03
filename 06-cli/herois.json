@@ -1,1 +1,13 @@
-[{"id":1549152944707,"nome":"Mera","poder":"Falar com peixes"}]
+[{
+    "id"   : 1549152944707,
+    "nome" : "Mera",
+    "poder": "Falar com peixes"
+}, {
+    "id"   : 1,
+    "nome" : "Flash",
+    "poder": "Speed"
+}, {
+    "id"   : 2,
+    "nome" : "Batman",
+    "poder": "Dinheiro"
+}]
